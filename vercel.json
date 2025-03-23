@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "agentimate",
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/public/$1" },
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/marketplace", "dest": "/public/marketplace.html" }
+  ]
+} 
